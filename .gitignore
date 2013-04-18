@@ -4,6 +4,7 @@
 /localbitcoins.egg-info
 /src/localbitcoins/config/bitfloor.py
 /src/localbitcoins/config/blockchain.py
+/ledger.csv
 *.pyc
 *.pyo
 *.swp
