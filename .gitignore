@@ -1,0 +1,9 @@
+/bin
+/lib
+/bootstrap.py
+/localbitcoins.egg-info
+/src/localbitcoins/config/bitfloor.py
+/src/localbitcoins/config/blockchain.py
+*.pyc
+*.pyo
+*.swp

@@ -1,0 +1,4 @@
+[console_scripts]
+test = localbitcoins.test.main:main
+main = localbitcoins.main:main
+

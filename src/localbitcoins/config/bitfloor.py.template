@@ -1,0 +1,6 @@
+host = "https://api.bitfloor.com"
+key = ""
+passphrase = ""
+version = "1"
+
+secret = ""
