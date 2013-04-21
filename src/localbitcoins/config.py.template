@@ -1,0 +1,3 @@
+from decimal import Decimal
+
+commission = Decimal('0.02')

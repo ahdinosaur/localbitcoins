@@ -81,5 +81,15 @@ def qr_for_address(callback):
       qr_for_address(callback)
   qr.decode_webcam(callback=check_addr_then_cb)
 
+def prompt_for_addr(callback):
+  address_method = utils.prompt("copypaste or qrcode?", "(copypaste|qrcode)")
+  if address_method == 'copypaste':
+    to_addr = utils.prompt("what address should i send the coins to?", utils.is_valid_btc_address)
+    callback(addr)
+  elif address_method == 'qrcode':
+    utils.qr_for_address(callback)
+
+
 if __name__ == '__main__':
   print is_valid_btc_address("13mG1L6Wve9zytw1qD5ZR2dtvYcETWWd1j")
+

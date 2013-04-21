@@ -10,7 +10,7 @@ import os
 
 import requests
 
-import config.bitfloor
+import config
 
 class RAPI(object):
   def __init__(self, product_id, key, secret):
@@ -84,7 +84,7 @@ class RAPI(object):
     return (Decimal(str(n))/self._inc).quantize(Decimal('1'))*self._inc
 
   def _send_get(self, url, payload={}):
-    r = requests.get("%s%s" % (config.bitfloor.host, url), data=payload, verify=False)
+    r = requests.get("%s%s" % (config.host, url), data=payload, verify=False)
     r.raise_for_status()
     return r.json()
 
@@ -102,12 +102,12 @@ class RAPI(object):
     headers = {
         'bitfloor-key': self._key,
         'bitfloor-sign': sig_b64,
-        'bitfloor-passphrase': config.bitfloor.passphrase,
-        'bitfloor-version': config.bitfloor.version,
+        'bitfloor-passphrase': config.passphrase,
+        'bitfloor-version': config.version,
         'Content-Type': 'application/x-www-form-urlencoded',
         'Content-Length': len(body)
     }
 
-    r = requests.post("%s%s" % (config.bitfloor.host, url), data=body, headers=headers, verify=False)
+    r = requests.post("%s%s" % (config.host, url), data=body, headers=headers, verify=False)
     r.raise_for_status()
     return r.json()
