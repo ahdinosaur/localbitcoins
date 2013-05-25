@@ -9,7 +9,7 @@ setup(
     author_email = "dinosaur@riseup.net",
     package_dir = { '' : 'src' },
     packages = [ 'localbitcoins'],
-    install_requires = ['setuptools', 'requests'],
+    install_requires = ['setuptools', 'requests', 'campbx'],
     entry_points = {
         'console_scripts' : [
             "main = localbitcoins.main:main",

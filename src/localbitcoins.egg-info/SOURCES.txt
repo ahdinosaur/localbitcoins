@@ -1,12 +1,10 @@
 README
 setup.py
 src/localbitcoins/__init__.py
-src/localbitcoins/bitfloor.py
-src/localbitcoins/book.py
+src/localbitcoins/config.py
 src/localbitcoins/ledger.py
 src/localbitcoins/main.py
 src/localbitcoins/utils.py
-src/localbitcoins/wallet.py
 src/localbitcoins.egg-info/PKG-INFO
 src/localbitcoins.egg-info/SOURCES.txt
 src/localbitcoins.egg-info/dependency_links.txt
